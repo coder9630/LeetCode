@@ -19,21 +19,23 @@ namespace LeetCodeChallengeTest
         [Test]
         public void TestAAA()
         {
-            ReverseLinkedList2Helper.ListNode oldHeadNode = null;
+            var list = ReverseLinkedList2Helper.List.CreateList(new int[] {  });
 
-            var newHeadNode = reverseLinkedList2Helper.ReverseBetween(oldHeadNode, 1, 1);
+            var newList = new ReverseLinkedList2Helper.List();
+            newList.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 1);
 
-            Assert.AreEqual(null, newHeadNode);
+            Assert.AreEqual(null, newList.HeadNode);
         }
 
         [Test]
         public void TestOrigEmpty()
         {
-            ReverseLinkedList2Helper.ListNode oldHeadNode = null;
+            var list = ReverseLinkedList2Helper.List.CreateList(new int[] { });
 
-            var newHeadNode = reverseLinkedList2Helper.ReverseBetween(oldHeadNode, 1, 1);
+            var newList = new ReverseLinkedList2Helper.List();
+            newList.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 1);
 
-            Assert.AreEqual(null, newHeadNode);
+            Assert.AreEqual(null, newList.HeadNode);
         }
 
 
@@ -42,9 +44,10 @@ namespace LeetCodeChallengeTest
         {
             var list = ReverseLinkedList2Helper.List.CreateList(new int[] { 1, 2, 3, 4, 5 });
 
-            var newHeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 2, 4);
+            var newList = new ReverseLinkedList2Helper.List();
+            newList.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 2, 4);
 
-            var arr = list.ToArray();
+            var arr = newList.ToArray();
             Assert.AreEqual(5, arr.Length);
             Assert.AreEqual(1, arr[0]);
             Assert.AreEqual(4, arr[1]);
@@ -58,10 +61,10 @@ namespace LeetCodeChallengeTest
         {
             var list = ReverseLinkedList2Helper.List.CreateList(new int[] { 5 });
 
-            //ListHeadNode wieder zuweisen
-            list.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 1);
+            var newList = new ReverseLinkedList2Helper.List();
+            newList.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 1);
 
-            var arr = list.ToArray();
+            var arr = newList.ToArray();
             Assert.AreEqual(1, arr.Length);
             Assert.AreEqual(5, arr[0]);
         }
@@ -71,9 +74,10 @@ namespace LeetCodeChallengeTest
         {
             var list = ReverseLinkedList2Helper.List.CreateList(new int[] { 1, 2, 3, 4, 5 });
 
-            list.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 5);
+            var newList = new ReverseLinkedList2Helper.List();
+            newList.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 5);
 
-            var arr = list.ToArray();
+            var arr = newList.ToArray();
             Assert.AreEqual(5, arr.Length);
             Assert.AreEqual(5, arr[0]);
             Assert.AreEqual(4, arr[1]);
@@ -87,9 +91,10 @@ namespace LeetCodeChallengeTest
         {
             var list = ReverseLinkedList2Helper.List.CreateList(new int[] { 1, 2, 3, 4, 5 });
 
-            list.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 4);
+            var newList = new ReverseLinkedList2Helper.List();
+            newList.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 4);
 
-            var arr = list.ToArray();
+            var arr = newList.ToArray();
             Assert.AreEqual(5, arr.Length);
             Assert.AreEqual(4, arr[0]);
             Assert.AreEqual(3, arr[1]);
@@ -103,9 +108,10 @@ namespace LeetCodeChallengeTest
         {
             var list = ReverseLinkedList2Helper.List.CreateList(new int[] { 1, 2, 3, 4, 5 });
 
-            list.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 1);
+            var newList = new ReverseLinkedList2Helper.List();
+            newList.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 1, 1);
 
-            var arr = list.ToArray();
+            var arr = newList.ToArray();
             Assert.AreEqual(5, arr.Length);
             Assert.AreEqual(1, arr[0]);
             Assert.AreEqual(2, arr[1]);
@@ -119,9 +125,10 @@ namespace LeetCodeChallengeTest
         {
             var list = ReverseLinkedList2Helper.List.CreateList(new int[] { 1, 2, 3, 4, 5 });
 
-            list.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 2, 5);
+            var newList = new ReverseLinkedList2Helper.List();
+            newList.HeadNode = reverseLinkedList2Helper.ReverseBetween(list.HeadNode, 2, 5);
 
-            var arr = list.ToArray();
+            var arr = newList.ToArray();
             Assert.AreEqual(5, arr.Length);
             Assert.AreEqual(1, arr[0]);
             Assert.AreEqual(5, arr[1]);

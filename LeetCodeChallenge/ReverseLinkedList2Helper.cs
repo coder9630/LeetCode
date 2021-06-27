@@ -43,7 +43,7 @@ namespace LeetCodeChallenge
                 var list = new List();
 
                 if (values.Length == 0)
-                    return null;
+                    return list;
 
                 list.headNode = new ListNode();
                 list.headNode.val = values[0];
